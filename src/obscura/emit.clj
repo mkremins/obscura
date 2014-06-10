@@ -8,6 +8,7 @@
   {:db/id (:db/id ast)
    :ast/op (:op ast)
    :ast/ns (-> ast :env :ns keyword)
+   :ast/context (-> ast :env :context)
    :ast/top-level (or (:top-level ast) false)
    :source/file (-> ast :env :file)
    :source/line (or (-> ast :env :line) 0)

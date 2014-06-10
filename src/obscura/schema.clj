@@ -17,6 +17,7 @@
 (def common-attributes
   [[:ast/op :keyword]
    [:ast/ns :keyword]
+   [:ast/context :keyword] ; maybe this should be an enumerated value?
    [:ast/top-level :boolean]
    [:source/file :string]
    [:source/line :long]
