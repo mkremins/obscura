@@ -21,7 +21,8 @@
    [:ast/top-level :boolean]
    [:source/file :string]
    [:source/line :long]
-   [:source/form :string]])
+   [:source/form :string]
+   [:source/raw-forms :string :many]])
 
 (def node-attributes
   [[:ast.binding/name :keyword]

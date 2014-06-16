@@ -12,7 +12,8 @@
    :ast/top-level (or (:top-level ast) false)
    :source/file (-> ast :env :file)
    :source/line (or (-> ast :env :line) 0)
-   :source/form (-> ast :form pr-str)})
+   :source/form (-> ast :form pr-str)
+   :source/raw-forms (map pr-str (:raw-forms ast))})
 
 (defmulti emit :op)
 
