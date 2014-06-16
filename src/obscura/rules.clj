@@ -9,8 +9,7 @@
   (->> schema/node-attributes
     (filter #(= (second %) :ref))
     (map first)
-    (map child-clause)
-    vec))
+    (mapv child-clause)))
 
 (def descendant
   '[[(descendant ?ancestor ?descendant)
